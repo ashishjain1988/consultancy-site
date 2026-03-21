@@ -17,9 +17,8 @@ const SITE_DATA = {
     name:       "ATGC Bioinformatics",
     founder:    "Ashish Jain, PhD",           // shown in About & footer
     credential: "PhD",
-    credential: "PhD",
-    role:       "Bioinformatics & Data Science Consultant",
-    tagline:    "Senior Computational Biologist with 10+ years of expertise in NGS analysis, single-cell & spatial transcriptomics, machine learning, and multi-omics integration. Available for independent consulting.",
+    role:       "Bioinformatics & Data Science Consultancy",
+    tagline:    "I bring 10+ years of expertise in NGS analysis, single-cell & spatial transcriptomics, machine learning, and multi-omics integration — helping research groups and biotech companies turn complex genomic data into actionable scientific insights.",
     email:      "contact@atgcbioinformatics.com",
     phone:      "(317) 529-7973",
     photo:      "assets/images/AJ_headshot.jpg",

@@ -61,6 +61,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const heroTagline = $('hero-tagline');
   if (heroTagline) heroTagline.textContent = d.identity.tagline;
 
+  const heroFounder = $('hero-founder');
+  if (heroFounder) heroFounder.textContent = `Founded by ${d.identity.founder}`;
+
   // Brochure + CTA buttons
   const heroCtas = $('hero-ctas');
   if (heroCtas) {
