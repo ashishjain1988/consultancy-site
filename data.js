@@ -141,7 +141,7 @@ const SITE_DATA = {
    * ---------------------------------------------------------- */
   skills: [
     {
-      title: "NGS & Multi-Omics Analysis",
+      title: "NGS & Multi-Omics",
       items: ["scRNA-seq", "Spatial Transcriptomics", "Bulk RNA-seq", "WGS/WES", "ChIP-Seq", "DNA Methylation", "Proteomics", "Hi-C","MOFA", "GWAS", "Trajectory Analysis", "Cell-Cell Communication","WGCNA"],
     },
     {
@@ -149,7 +149,7 @@ const SITE_DATA = {
       items: ["R", "Python", "Bash", "Java", "JavaScript", "SQL"],
     },
     {
-      title: "Data Visualization",
+      title: "Visualization",
       items: ["R Shiny", "ggplot2", "plotly", "VitessceR","CellxGene"],
     },
     {
@@ -157,12 +157,12 @@ const SITE_DATA = {
       items: ["Supervised Learning", "Unsupervised Learning", "Classification", "Clustering", "Regression"],
     },
     {
-      title: "Infrastructure & Tools",
-      items: ["HPC (SLURM)", "AWS", "Distributed Computing", "GitHub/GitLab", "MySQL", "Oracle"],
+      title: "Infrastructure & Cloud",
+      items: ["HPC (SLURM)", "AWS", "Distributed Computing", "GitHub/GitLab", "MySQL"],
     },
     {
-      title: "Leadership",
-      items: ["Cross-functional Project Mgmt", "Mentoring", "Workshop Facilitation", "Study Design"],
+      title: "Delivery & Leadership",
+      items: ["Study Design", "Cross-functional Collaboration", "Workshop Facilitation", "Mentoring", "Scientific Writing"],
     },
   ],
 
