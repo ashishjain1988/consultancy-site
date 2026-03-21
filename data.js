@@ -18,7 +18,7 @@ const SITE_DATA = {
     founder:    "Ashish Jain, PhD",           // shown in About & footer
     credential: "PhD",
     role:       "Bioinformatics & Data Science Consultancy",
-    tagline:    "I bring 10+ years of expertise in NGS analysis, single-cell & spatial transcriptomics, machine learning, and multi-omics integration — helping research groups and biotech companies turn complex genomic data into actionable scientific insights.",
+    tagline:    "Empowering biotech and research teams to unlock the full potential of their data through advanced NGS analytics, single-cell and spatial biology, and machine learning–driven multi-omics integration.",
     email:      "contact@atgcbioinformatics.com",
     phone:      "(317) 529-7973",
     photo:      "assets/images/AJ_headshot.jpg",
@@ -31,6 +31,7 @@ const SITE_DATA = {
     },
   },
 
+
   /* ----------------------------------------------------------
    *  HERO STATS  (the 3 numbers on the dark panel)
    * ---------------------------------------------------------- */
@@ -41,21 +42,62 @@ const SITE_DATA = {
   ],
 
   /* ----------------------------------------------------------
-   *  ABOUT  (paragraphs shown on the About section)
+   *  ABOUT
+   *  Written from a consultancy perspective — "we/our" framing.
+   *  The experience track record is in data.experience below.
    * ---------------------------------------------------------- */
   about: {
     paragraphs: [
-      "I am a Senior Computational Biologist and Bioinformatics Scientist with over a decade of hands-on experience across leading research hospitals, national laboratories, and industry. I hold a PhD in Bioinformatics and Computational Biology from Iowa State University.",
-      "My work spans advanced NGS and multi-omics data analysis, single-cell and spatial transcriptomics, machine learning, and the development of open-source computational tools. I have led projects at Boston Children's Hospital, the Frederick National Laboratory for Cancer Research (NIH/NCI), and Takeda Pharmaceuticals.",
-      "I am now available for independent consulting engagements to help research groups, biotech companies, and clinical organizations unlock the full potential of their genomic data.",
+      "ATGC Bioinformatics is an independent consulting practice specializing in next-generation sequencing, multi-omics integration, and computational biology. We partner with academic research groups, hospitals, and biotech companies to design, execute, and interpret complex genomic analyses.",
+      "Founded by Ashish Jain, PhD — a computational biologist with over a decade of experience at institutions including Boston Children's Hospital, the Frederick National Laboratory for Cancer Research (NIH/NCI), and Takeda Pharmaceuticals — ATGC brings publication-grade rigor and deep technical expertise to every engagement.",
+      "From early study design through to publication-ready results, we act as an embedded scientific partner, not just a service provider. Our goal is to accelerate your research, reduce technical bottlenecks, and ensure your genomic data reaches its full scientific potential.",
     ],
     highlights: [
-      { icon: "🎓", title: "PhD, Bioinformatics",  detail: "Iowa State University, Bioinformatics and Computational Biology (Minor in Statistics)"},
-      { icon: "🏥", title: "Current Role",          detail: "Senior Data Scientist, Merck"         },
-      { icon: "📦", title: "Open Source",           detail: "TissueEnrich, MAFDash, scDown & more on GitHub" },
-      { icon: "🏆", title: "Recognition",           detail: 'Multiple research excellence awards, Several Employee Awards' },
+      { icon: "🔬", title: "Research-Grade Analysis",  detail: "Every deliverable is held to peer-reviewed publication standards"          },
+      { icon: "🤝", title: "Embedded Partnership",     detail: "We work closely with your team from study design through to results"        },
+      { icon: "⚡", title: "Rapid Turnaround",         detail: "Optimized pipelines on HPC and cloud for fast, reproducible results"        },
+      { icon: "📦", title: "Open-Source Commitment",   detail: "Tools like TissueEnrich & MAFDash used by thousands of researchers globally" },
     ],
   },
+
+  /* ----------------------------------------------------------
+   *  EXPERIENCE
+   *  Displayed as compact org cards inside the About section —
+   *  not as a standalone CV timeline. Each entry has:
+   *    org, role, period, summary (1–2 sentences max)
+   * ---------------------------------------------------------- */
+  experience: [
+    {
+      period:  "February 2026 — Present",
+      role: "Senior Data Scientist",
+      org:   "Merck & Co.",
+      summary: "Empowering neuroscience research through advanced multi-omics analysis and interactive visualization platforms, translating complex data into accessible, actionable insights.",
+    },
+    {
+      org:     "Boston Children's Hospital",
+      role:    "Data Scientist III",
+      period:  "2022 — Present",
+      summary: "Lead bioinformatics support across multiple research groups — scRNA-seq, spatial transcriptomics, WGS/WES, proteomics, and DNA methylation. Contributed to 10+ peer-reviewed publications.",
+    },
+    {
+      org:     "Frederick National Lab for Cancer Research (NIH/NCI)",
+      role:    "Bioinformatics Analyst II",
+      period:  "2020 — 2022",
+      summary: "Multi-omics integration across 40+ rare cancers in the MyPART program. Developed MAFDash, a widely adopted open-source mutation visualization tool.",
+    },
+    {
+      org:     "Takeda Pharmaceuticals",
+      role:    "Computational Biology Intern",
+      period:  "2019",
+      summary: "Human microbiome protein subfamily discovery using ProtVec deep learning; benchmarked GPU infrastructure for large-scale bioinformatics.",
+    },
+    {
+      org:     "Iowa State University",
+      role:    "PhD Research — Bioinformatics & Computational Biology",
+      period:  "2015 — 2020",
+      summary: "Developed TissueEnrich (Bioconductor), PlacentaCellEnrich (R Shiny), and led multi-omics studies of early placental development. Thesis: NGS-based molecular mechanisms in early placentation.",
+    },
+  ],
 
   /* ----------------------------------------------------------
    *  SERVICES
@@ -96,85 +138,6 @@ const SITE_DATA = {
       title: "Interactive Data Visualization and Tool Development",
       description: "Custom R Shiny dashboards and interactive multi-omics visualization webtools for exploring and sharing complex genomic datasets with collaborators and clinicians.",
       tags:  ["R Shiny", "ggplot2", "plotly", "VitessceR"],
-    },
-  ],
-
-  /* ----------------------------------------------------------
-   *  EXPERIENCE
-   *  Each item: date, title, org, bullets (array of strings)
-   *  Optionally add a `link` to each bullet for hyperlinks.
-   * ---------------------------------------------------------- */
-  experience: [
-    {
-      date:  "February 2026 — Present",
-      title: "Senior Data Scientist",
-      org:   "Merck & Co.",
-      bullets: [
-        "Delivering bioinformatics support to neuroscience research groups, including comprehensive analysis of bulk RNA-seq, proteomics, and integrative multi-omics datasets to drive meaningful biological insights.",
-        "Developed interactive HTML dashboards and R Shiny applications to seamlessly share and explore analyzed NGS data with collaborators, enabling intuitive visualization and data-driven insights.",
-      ],
-    },
-    {
-      date:  "April 2022 — January 2026",
-      title: "Data Scientist III",
-      org:   "Boston Children's Hospital (BCH)",
-      bullets: [
-        "Lead bioinformatics support for multiple research groups: NGS analysis, machine learning, and statistical modeling in collaboration with clinicians and biologists.",
-        "Analyzed immune scRNA-seq data from skin inflammatory pain models identifying cell-type-specific transcriptional programs and neuroimmune interactomes (Nature Immunology, 2024).",
-        "Developed automated pipeline to identify compound heterozygous variants (small + structural) from trio WGS data for Nystagmus and Strabismus families.",
-        "Built R Shiny applications, multi-omics visualization tools, and the scDown R package (https://github.com/BCH-RC/scDown).",
-        "Developed and optimized pipelines for scRNA-seq, spatial, Hi-C, WGS/WES, proteomics, and DNA methylation on BCH HPC.",
-        "Led bioinformatics workshops, mentored junior staff and students. Contributed to 10+ peer-reviewed manuscripts.",
-      ],
-    },
-    {
-      date:  "December 2020 — April 2022",
-      title: "Bioinformatics Analyst II",
-      org:   "Frederick National Laboratory for Cancer Research (NIH/NCI)",
-      bullets: [
-        "Led multi-omics integration (RNA-seq, WGS, WES, DNA methylation, PPI, DrugBank) across 40+ rare cancers in the MyPART team to identify marker genes and drug targets.",
-        "Developed the MAFDash R package for interactive mutation data dashboards — freely available on GitHub (https://github.com/ashishjain1988/MAFDash).",
-        "Provided bioinformatics support across NIH/NCI research groups as part of the CCBR team.",
-        "Led trainings on R package development best practices. Contributed to 3+ peer-reviewed manuscripts.",
-      ],
-    },
-    {
-      date:  "May 2019 — August 2019",
-      title: "Computational Biology Intern",
-      org:   "Takeda Pharmaceuticals",
-      bullets: [
-        "Led analysis of human microbiome data for discovery of novel protein subfamilies using ProtVec encoding and clustering.",
-        "Benchmarked new GPU infrastructure; tested multi-layer CNN models for protein sequence encoding.",
-      ],
-    },
-    {
-      date:  "August 2015 — November 2020",
-      title: "Research Assistant (PhD)",
-      org:   "Iowa State University",
-      bullets: [
-        "Developed TissueEnrich R/Bioconductor package for tissue-specific gene enrichment analysis — downloaded by thousands of users worldwide (https://bioconductor.org/packages/release/bioc/html/TissueEnrich.html).",
-        "Built PlacentaCellEnrich R Shiny web tool for placenta cell-specific gene enrichment analysis (https://placentacellenrich.gdcb.iastate.edu/).",
-        "Investigated effects of oxygen stress on trophoblast invasion in early-onset preeclampsia using bulk RNA-seq and WGCNA.",
-        "Contributed to 10+ peer-reviewed manuscripts including publications in PNAS, Epigenetics & Chromatin, and Bioinformatics.",
-      ],
-    },
-    {
-      date:  "May 2015 — August 2015",
-      title: "Bioinformatics Intern",
-      org:   "Cancer Genetics Inc.",
-      bullets: [
-        "Built a cancer variant database using the cBioPortal codebase for internal diagnostic data visualization and analysis.",
-        "Designed an automated variant-calling pipeline for WGS/WES datasets using Bash and Python.",
-      ],
-    },
-    {
-      date:  "July 2011 — July 2014",
-      title: "Software Engineer",
-      org:   "Onmobile Global Limited / Hcentive Private Limited",
-      bullets: [
-        "Developed web-based solutions for US healthcare companies to store post-enrollment details in Medicare plans at Hcentive.",
-        "Worked on the User Interface of a video calling Android application at Onmobile.",
-      ],
     },
   ],
 
@@ -291,20 +254,6 @@ const SITE_DATA = {
       journal: "Scientific Reports",
       firstAuthor: true,
     },
-  ],
-
-  /* ----------------------------------------------------------
-   *  AWARDS
-   * ---------------------------------------------------------- */
-  awards: [
-    { year: "2023 & 2025", title: '"Way to Shine" Award',                              org: "Boston Children's Hospital"                          },
-    { year: "2021 & 2022", title: "Performance Bonus — Outstanding Research Contribution", org: "Frederick National Laboratory for Cancer Research" },
-    { year: "2020",        title: "Research Award for Exceptional Doctoral Research",  org: "GPSS, Iowa State University"                         },
-    { year: "2019",        title: "Research Excellence Award",                         org: "Graduate College, Iowa State University"              },
-    { year: "2015",        title: "MCBIOS Travel Grant",                               org: "MCBIOS-XII Annual Conference"                        },
-    { year: "2013",        title: "Employee of the Month",                             org: "Hcentive Private Limited"                            },
-    { year: "2011",        title: "First Prize, Training Project",                     org: "Onmobile Private Limited, Bangalore"                },
-    { year: "2010",        title: "Summer Research Fellowship",                        org: "Indian Academy of Science, Bangalore"                },
   ],
 
   /* ----------------------------------------------------------

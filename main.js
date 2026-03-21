@@ -5,8 +5,8 @@
  *  You should NOT need to edit this file for content updates.
  *  All content lives in data.js.
  *
- *  Only edit this file if you want to change the HTML
- *  structure or add/remove an entire section.
+ *  Only edit this file if you want to change HTML structure
+ *  or add/remove an entire section.
  * ============================================================
  */
 
@@ -17,31 +17,25 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── Helpers ─────────────────────────────────────────────
   const $ = (id) => document.getElementById(id);
 
-  /** Escape HTML to prevent injection from data strings */
+  /** Escape HTML special chars */
   const esc = (str) => String(str)
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;');
 
-  /**
-   * Convert plain text that may contain a URL like:
-   *   "See the package (https://example.com)."
-   * into a clickable <a> link.
-   */
-  const linkify = (text) => {
-    return esc(text).replace(
+  /** Convert bare URLs in text into clickable links */
+  const linkify = (text) =>
+    esc(text).replace(
       /(https?:\/\/[^\s)]+)/g,
       '<a href="$1" target="_blank" rel="noopener" style="color:var(--accent)">$1</a>'
     );
-  };
 
   // ── Document title ───────────────────────────────────────
-  document.title = `${d.identity.name}, ${d.identity.credential} | ${d.identity.role}`;
+  document.title = `${d.identity.name} | ${d.identity.role}`;
 
   // ── Nav brand ────────────────────────────────────────────
   const brand = $('nav-brand');
   if (brand) {
-    // Split at last word so accent color lands on "Bioinformatics"
     const words = d.identity.name.split(' ');
     const last  = words.pop();
     brand.innerHTML = `${esc(words.join(' '))} <span>${esc(last)}</span>`;
@@ -58,21 +52,21 @@ document.addEventListener('DOMContentLoaded', () => {
     heroName.innerHTML = `${esc(words.join(' '))}<br><span class="hero-title-accent">${esc(last)}</span>`;
   }
 
-  const heroTagline = $('hero-tagline');
-  if (heroTagline) heroTagline.textContent = d.identity.tagline;
-
   const heroFounder = $('hero-founder');
   if (heroFounder) heroFounder.textContent = `Founded by ${d.identity.founder}`;
 
-  // Brochure + CTA buttons
+  const heroTagline = $('hero-tagline');
+  if (heroTagline) heroTagline.textContent = d.identity.tagline;
+
+  // CTA buttons — conditionally include brochure
   const heroCtas = $('hero-ctas');
   if (heroCtas) {
-    let btns = `<a href="#services" class="btn-primary">View Services</a>
-                <a href="#contact"  class="btn-secondary">Get in Touch</a>`;
+    let btns = `
+      <a href="#services" class="btn-primary">View Services</a>
+      <a href="#contact"  class="btn-secondary">Get in Touch</a>`;
     if (d.identity.brochure) {
-      btns += `<a href="${esc(d.identity.brochure)}" class="btn-secondary" download>
-                 ⬇ Download Brochure
-               </a>`;
+      btns += `
+      <a href="${esc(d.identity.brochure)}" class="btn-secondary" download>⬇ Download Brochure</a>`;
     }
     heroCtas.innerHTML = btns;
   }
@@ -88,23 +82,21 @@ document.addEventListener('DOMContentLoaded', () => {
     `).join('');
   }
 
-  // ── About ────────────────────────────────────────────────
+  // ── About — photo ────────────────────────────────────────
   const aboutPhoto = $('about-photo');
   if (aboutPhoto) {
-    if (d.identity.photo) {
-      aboutPhoto.innerHTML = `<img src="${esc(d.identity.photo)}" alt="${esc(d.identity.name)}" class="about-photo" />`;
-    } else {
-      aboutPhoto.innerHTML = `
-        <div class="about-photo-placeholder">
-          <svg width="64" height="64" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
-              d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0z"/>
-          </svg>
-          <p>Add your photo here</p>
-        </div>`;
-    }
+    aboutPhoto.innerHTML = d.identity.photo
+      ? `<img src="${esc(d.identity.photo)}" alt="${esc(d.identity.founder)}" class="about-photo" />`
+      : `<div class="about-photo-placeholder">
+           <svg width="64" height="64" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+               d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0z"/>
+           </svg>
+           <p>Add your photo here</p>
+         </div>`;
   }
 
+  // About — profile links
   const aboutLinks = $('about-links');
   if (aboutLinks) {
     const { email, links } = d.identity;
@@ -124,6 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
   }
 
+  // About — paragraphs
   const aboutParagraphs = $('about-paragraphs');
   if (aboutParagraphs) {
     aboutParagraphs.innerHTML = d.about.paragraphs
@@ -131,12 +124,30 @@ document.addEventListener('DOMContentLoaded', () => {
       .join('');
   }
 
+  // About — highlight cards
   const aboutHighlights = $('about-highlights');
   if (aboutHighlights) {
     aboutHighlights.innerHTML = d.about.highlights.map(h => `
       <div class="highlight-card reveal">
         <h4>${esc(h.icon)} ${esc(h.title)}</h4>
         <p>${esc(h.detail)}</p>
+      </div>
+    `).join('');
+  }
+
+  // ── Experience — compact org cards (inside About section) ─
+  const expCards = $('exp-cards');
+  if (expCards) {
+    expCards.innerHTML = d.experience.map(job => `
+      <div class="exp-card reveal">
+        <div class="exp-card-header">
+          <div>
+            <p class="exp-card-org">${esc(job.org)}</p>
+            <p class="exp-card-role">${esc(job.role)}</p>
+          </div>
+          <span class="exp-card-period">${esc(job.period)}</span>
+        </div>
+        <p class="exp-card-summary">${esc(job.summary)}</p>
       </div>
     `).join('');
   }
@@ -156,28 +167,11 @@ document.addEventListener('DOMContentLoaded', () => {
     `).join('');
   }
 
-  // ── Experience ───────────────────────────────────────────
-  const timeline = $('timeline');
-  if (timeline) {
-    timeline.innerHTML = d.experience.map(job => `
-      <div class="timeline-item reveal">
-        <p class="timeline-date">${esc(job.date)}</p>
-        <h3>${esc(job.title)}</h3>
-        <p class="timeline-org">${esc(job.org)}</p>
-        <ul class="timeline-details">
-          ${job.bullets.map(b => `<li>${linkify(b)}</li>`).join('')}
-        </ul>
-      </div>
-    `).join('');
-  }
-
-  // ── Skills ───────────────────────────────────────────────
+  // ── Skills / Expertise ───────────────────────────────────
   const skillsLayout = $('skills-layout');
   if (skillsLayout) {
-    // Split groups into two columns
     const half = Math.ceil(d.skills.length / 2);
-    const cols  = [d.skills.slice(0, half), d.skills.slice(half)];
-
+    const cols = [d.skills.slice(0, half), d.skills.slice(half)];
     skillsLayout.innerHTML = cols.map(col => `
       <div>
         ${col.map(group => `
@@ -217,27 +211,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const scholarLink = $('scholar-link');
-  if (scholarLink) {
-    scholarLink.href = d.identity.links.scholar;
-  }
-
-  // ── Awards ───────────────────────────────────────────────
-  const awardsGrid = $('awards-grid');
-  if (awardsGrid) {
-    awardsGrid.innerHTML = d.awards.map(a => `
-      <div class="award-card reveal">
-        <p class="award-year">${esc(a.year)}</p>
-        <h4>${esc(a.title)}</h4>
-        <p class="award-org">${esc(a.org)}</p>
-      </div>
-    `).join('');
-  }
+  if (scholarLink) scholarLink.href = d.identity.links.scholar;
 
   // ── Testimonials ─────────────────────────────────────────
   const testimonialsGrid = $('testimonials-grid');
   if (testimonialsGrid) {
     const hasPlaceholders = d.testimonials.some(t => t.placeholder);
-
     const note = $('testimonials-note');
     if (note) note.style.display = hasPlaceholders ? 'block' : 'none';
 
@@ -270,7 +249,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const contactScholar = $('contact-scholar');
   if (contactScholar) contactScholar.href = d.identity.links.scholar;
 
-  // Calendar booking link
   const contactCalendar = $('contact-calendar');
   if (contactCalendar) {
     if (d.identity.calendar) {
@@ -281,7 +259,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Brochure download link
   const contactBrochure = $('contact-brochure');
   if (contactBrochure) {
     if (d.identity.brochure) {
@@ -302,7 +279,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── Footer ───────────────────────────────────────────────
   const footerBrand = $('footer-brand');
   if (footerBrand) {
-    footerBrand.innerHTML = `${esc(d.identity.name)} <span style="opacity:0.45;font-size:0.85em">· ${esc(d.identity.founder)}</span>`;
+    footerBrand.innerHTML = `${esc(d.identity.name)}<span style="opacity:0.45;font-size:0.85em"> · ${esc(d.identity.founder)}</span>`;
   }
 
   const footerYear = $('footer-year');
@@ -344,21 +321,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ── Scroll reveal ────────────────────────────────────────
+  // ── Scroll reveal ─────────────────────────────────────────
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        observer.unobserve(entry.target); // animate only once
+        observer.unobserve(entry.target);
       }
     });
   }, { threshold: 0.08 });
 
-  // Observe all .reveal elements (includes dynamically added ones)
-  const observeReveals = () =>
+  setTimeout(() => {
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  // Give DOM a tick for dynamic content to render
-  setTimeout(observeReveals, 50);
+  }, 50);
 
 });

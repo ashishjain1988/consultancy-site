@@ -26,9 +26,9 @@
   <ul class="nav-links" id="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#publications">Publications</a></li>
+    <li><a href="#skills">Expertise</a></li>
+    <li><a href="#publications">Research</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 
@@ -43,7 +43,6 @@
      ═══════════════════════════════════════════════════════════ -->
 <section id="hero">
 
-  <!-- Left: text -->
   <div class="hero-text">
     <p class="hero-eyebrow" id="hero-eyebrow"></p>
     <h1 id="hero-name"></h1>
@@ -52,16 +51,13 @@
     <div class="hero-ctas" id="hero-ctas"></div>
   </div>
 
-  <!-- Right: dark decorative panel -->
   <div class="hero-visual">
-    <!-- Abstract DNA double-helix illustration -->
     <svg class="dna-svg" viewBox="0 0 200 500" fill="none"
          xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <path d="M40,10 Q160,60 40,110 Q160,160 40,210 Q160,260 40,310 Q160,360 40,410 Q160,460 40,510"
             stroke="white" stroke-width="2.5" fill="none"/>
       <path d="M160,10 Q40,60 160,110 Q40,160 160,210 Q40,260 160,310 Q40,360 160,410 Q40,460 160,510"
             stroke="white" stroke-width="2.5" fill="none"/>
-      <!-- Rungs -->
       <line x1="40"  y1="10"  x2="160" y2="10"  stroke="white" stroke-width="1.5" opacity="0.6"/>
       <line x1="40"  y1="60"  x2="160" y2="60"  stroke="white" stroke-width="1.5" opacity="0.6"/>
       <line x1="40"  y1="110" x2="160" y2="110" stroke="white" stroke-width="1.5" opacity="0.6"/>
@@ -72,7 +68,6 @@
       <line x1="40"  y1="360" x2="160" y2="360" stroke="white" stroke-width="1.5" opacity="0.6"/>
       <line x1="40"  y1="410" x2="160" y2="410" stroke="white" stroke-width="1.5" opacity="0.6"/>
       <line x1="40"  y1="460" x2="160" y2="460" stroke="white" stroke-width="1.5" opacity="0.6"/>
-      <!-- Nodes -->
       <circle cx="40"  cy="10"  r="5" fill="white" opacity="0.7"/>
       <circle cx="160" cy="60"  r="5" fill="white" opacity="0.7"/>
       <circle cx="40"  cy="110" r="5" fill="white" opacity="0.7"/>
@@ -84,8 +79,6 @@
       <circle cx="40"  cy="410" r="5" fill="white" opacity="0.7"/>
       <circle cx="160" cy="460" r="5" fill="white" opacity="0.7"/>
     </svg>
-
-    <!-- Stats — populated by main.js -->
     <div class="hero-stats" id="hero-stats"></div>
   </div>
 
@@ -94,29 +87,40 @@
 
 <!-- ═══════════════════════════════════════════════════════════
      ABOUT
+     Company intro + founder bio + condensed track record
+     (Experience is merged here — no separate Experience section)
      ═══════════════════════════════════════════════════════════ -->
 <section id="about">
   <div class="section-inner">
-    <div class="about-grid">
 
-      <!-- Left: photo + links -->
+    <!-- Part 1: Who we are -->
+    <div class="about-grid">
       <div class="about-aside">
         <div id="about-photo"></div>
         <div class="about-links" id="about-links"></div>
       </div>
-
-      <!-- Right: bio text -->
       <div class="about-content">
         <div class="section-header">
-          <p class="section-eyebrow">About Me</p>
-          <h2>Translating Genomic Data<br>into Scientific Insight</h2>
+          <p class="section-eyebrow">About Us</p>
+          <h2>Precision Bioinformatics,<br>Built for Science</h2>
           <div class="section-rule"></div>
         </div>
         <div id="about-paragraphs"></div>
         <div class="about-highlights" id="about-highlights"></div>
       </div>
-
     </div>
+
+    <!-- Part 2: Founder's track record — compact org cards -->
+    <div class="about-experience">
+      <div class="section-header" style="margin-top: 5rem">
+        <p class="section-eyebrow">Founder's Track Record</p>
+        <h2>Proven Across Leading Institutions</h2>
+        <div class="section-rule"></div>
+      </div>
+      <!-- Populated by main.js from data.experience -->
+      <div class="exp-cards" id="exp-cards"></div>
+    </div>
+
   </div>
 </section>
 
@@ -127,59 +131,45 @@
 <section id="services">
   <div class="section-inner">
     <div class="section-header">
-      <p class="section-eyebrow">What I Offer</p>
-      <h2>Consulting Services</h2>
+      <p class="section-eyebrow">What We Offer</p>
+      <h2>Our Consulting Services</h2>
       <div class="section-rule"></div>
     </div>
-    <!-- Populated by main.js -->
     <div class="services-grid" id="services-grid"></div>
   </div>
 </section>
 
 
 <!-- ═══════════════════════════════════════════════════════════
-     EXPERIENCE
-     ═══════════════════════════════════════════════════════════ -->
-<section id="experience">
-  <div class="section-inner">
-    <div class="section-header">
-      <p class="section-eyebrow">Work History</p>
-      <h2>Experience</h2>
-      <div class="section-rule"></div>
-    </div>
-    <!-- Populated by main.js -->
-    <div class="timeline" id="timeline"></div>
-  </div>
-</section>
-
-
-<!-- ═══════════════════════════════════════════════════════════
-     SKILLS
+     EXPERTISE  (Skills)
      ═══════════════════════════════════════════════════════════ -->
 <section id="skills">
   <div class="section-inner">
     <div class="section-header">
-      <p class="section-eyebrow">Technical Expertise</p>
-      <h2>Skills &amp; Technologies</h2>
+      <p class="section-eyebrow">Technical Depth</p>
+      <h2>Our Expertise</h2>
       <div class="section-rule"></div>
     </div>
-    <!-- Populated by main.js -->
     <div class="skills-layout" id="skills-layout"></div>
   </div>
 </section>
 
 
 <!-- ═══════════════════════════════════════════════════════════
-     PUBLICATIONS
+     RESEARCH  (Publications — framed as credibility, not CV)
      ═══════════════════════════════════════════════════════════ -->
 <section id="publications">
   <div class="section-inner">
     <div class="section-header">
-      <p class="section-eyebrow">Peer-Reviewed Research</p>
-      <h2>Selected Publications</h2>
+      <p class="section-eyebrow">Scientific Credibility</p>
+      <h2>Research &amp; Publications</h2>
       <div class="section-rule"></div>
+      <p class="section-subtext">
+        Our consulting is grounded in peer-reviewed science. The publications below
+        represent the analytical rigor and domain expertise we bring to every
+        client engagement.
+      </p>
     </div>
-    <!-- Populated by main.js -->
     <ul class="pub-list" id="pub-list"></ul>
     <p class="pub-scholar-link">
       Full publication list on
@@ -190,36 +180,18 @@
 
 
 <!-- ═══════════════════════════════════════════════════════════
-     AWARDS
-     ═══════════════════════════════════════════════════════════ -->
-<section id="awards">
-  <div class="section-inner">
-    <div class="section-header">
-      <p class="section-eyebrow">Recognition</p>
-      <h2>Awards &amp; Honors</h2>
-      <div class="section-rule"></div>
-    </div>
-    <!-- Populated by main.js -->
-    <div class="awards-grid" id="awards-grid"></div>
-  </div>
-</section>
-
-
-<!-- ═══════════════════════════════════════════════════════════
-     TESTIMONIALS
+     TESTIMONIALS  (in nav — prominent section)
      ═══════════════════════════════════════════════════════════ -->
 <section id="testimonials">
   <div class="section-inner">
     <div class="section-header">
-      <p class="section-eyebrow">Testimonials</p>
-      <h2>What Collaborators Say</h2>
+      <p class="section-eyebrow">Client &amp; Collaborator Feedback</p>
+      <h2>What People Say</h2>
       <div class="section-rule"></div>
-      <!-- Hidden if no placeholders exist -->
       <p class="testimonials-note" id="testimonials-note">
         * Placeholder testimonials — replace with real endorsements in data.js.
       </p>
     </div>
-    <!-- Populated by main.js -->
     <div class="testimonials-grid" id="testimonials-grid"></div>
   </div>
 </section>
@@ -231,17 +203,16 @@
 <section id="contact">
   <div class="section-inner">
     <div class="section-header">
-      <p class="section-eyebrow">Work Together</p>
-      <h2>Get in Touch</h2>
+      <p class="section-eyebrow">Work With Us</p>
+      <h2>Start a Conversation</h2>
       <div class="section-rule"></div>
     </div>
 
     <div class="contact-layout">
 
-      <!-- Left: contact info -->
       <div class="contact-info">
         <h3>Let's discuss your project</h3>
-        <p>Whether you have a specific dataset that needs analysis, need help designing a bioinformatics strategy, or want to develop a custom computational tool — I'd love to hear from you.</p>
+        <p>Whether you have a dataset that needs expert analysis, need help designing a bioinformatics strategy, or want to build a custom computational tool — we'd love to hear from you.</p>
 
         <div class="contact-item">
           <div class="contact-icon">✉</div>
@@ -269,42 +240,32 @@
         </div>
       </div>
 
-      <!-- Right: contact form -->
       <div class="contact-form">
-        <!--
-          The form uses data-netlify="true" for Netlify hosting.
-          On GitHub Pages it falls back to a mailto: link (handled in main.js).
-        -->
         <form name="contact" method="POST" data-netlify="true" action="#contact">
           <div class="form-row">
             <div class="form-group">
               <label for="name">Name</label>
-              <input type="text"  id="name"  name="name"  placeholder="Your name"        required />
+              <input type="text"  id="name"  name="name"  placeholder="Your name"      required />
             </div>
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="your@email.com"   required />
+              <input type="email" id="email" name="email" placeholder="your@email.com" required />
             </div>
           </div>
-
           <div class="form-group">
             <label for="org">Organization</label>
             <input type="text" id="org" name="organization"
                    placeholder="Institution / Company (optional)" />
           </div>
-
           <div class="form-group">
             <label for="service-select">Area of Interest</label>
-            <!-- Options populated by main.js from data.js -->
             <select id="service-select" name="service"></select>
           </div>
-
           <div class="form-group">
             <label for="message">Message</label>
             <textarea id="message" name="message"
-                      placeholder="Tell me about your project or question…"></textarea>
+                      placeholder="Tell us about your project or question…"></textarea>
           </div>
-
           <button type="submit" class="form-submit">Send Message</button>
         </form>
       </div>
@@ -327,8 +288,6 @@
   </div>
 </footer>
 
-
-<!-- ── Scripts (data first, then renderer) ─────────────────── -->
 <script src="data.js"></script>
 <script src="main.js"></script>
 
