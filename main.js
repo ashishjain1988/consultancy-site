@@ -41,8 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── Nav brand ────────────────────────────────────────────
   const brand = $('nav-brand');
   if (brand) {
-    const [first, ...rest] = d.identity.name.split(' ');
-    brand.innerHTML = `${esc(first)} <span>${esc(rest.join(' '))}</span>, ${esc(d.identity.credential)}`;
+    const [first, ...rest] = d.identity.companyName.split(' ');
+    //brand.innerHTML = `${esc(first)} <span>${esc(rest.join(' '))}</span>, ${esc(d.identity.credential)}`;
+    brand.innerHTML = `${esc(first)} <span>${esc(rest.join(' '))}</span>,`;
   }
 
   // ── Hero ─────────────────────────────────────────────────

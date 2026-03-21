@@ -14,11 +14,12 @@ const SITE_DATA = {
    *  IDENTITY
    * ---------------------------------------------------------- */
   identity: {
+    companyName: "ATGC Bioinformatics",
     name:       "Ashish Jain",
     credential: "PhD",
     role:       "Bioinformatics & Computational Biology Consultant",
     tagline:    "Senior Computational Biologist with 10+ years of expertise in NGS analysis, single-cell & spatial transcriptomics, machine learning, and multi-omics integration. Available for independent consulting.",
-    email:      "jain.ashishjain1@gmail.com",
+    email:      "contact@atgcbioinformatics.com",
     phone:      "(317) 529-7973",
     photo:      "assets/images/AJ_headshot.jpg",   // ← Put path to your headshot here, e.g. "assets/photo.jpg"
                       //   Leave empty to show placeholder
