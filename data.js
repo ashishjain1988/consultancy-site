@@ -18,7 +18,7 @@ const SITE_DATA = {
     founder:    "Ashish Jain, PhD",           // shown in About & footer
     credential: "PhD",
     role:       "Bioinformatics & Data Science Consultancy",
-    tagline:    "Empowering biotech and research teams to unlock the full potential of their data through advanced NGS analytics, single-cell and spatial biology, and machine learning–driven multi-omics integration.",
+    tagline:    "Empowering biotech and research teams to unlock the full potential of their data through advanced NGS analytics, single-cell and spatial biology, and machine learning driven multi-omics integration.",
     email:      "contact@atgcbioinformatics.com",
     phone:      "(317) 529-7973",
     photo:      "assets/images/AJ_headshot.jpg",
@@ -36,7 +36,7 @@ const SITE_DATA = {
    *  HERO STATS  (the 3 numbers on the dark panel)
    * ---------------------------------------------------------- */
   stats: [
-    { number: "10+", label: "Years Experience" },
+    { number: "12+", label: "Years Experience" },
     { number: "30+", label: "Publications"     },
     { number: "6+",  label: "R Packages & Tools" },
   ],
@@ -49,8 +49,8 @@ const SITE_DATA = {
   about: {
     paragraphs: [
       "ATGC Bioinformatics is an independent consulting practice specializing in next-generation sequencing, multi-omics integration, and computational biology. We partner with academic research groups, hospitals, and biotech companies to design, execute, and interpret complex genomic analyses.",
-      "Founded by Ashish Jain, PhD — a computational biologist with over a decade of experience at institutions including Boston Children's Hospital, the Frederick National Laboratory for Cancer Research (NIH/NCI), and Takeda Pharmaceuticals — ATGC brings publication-grade rigor and deep technical expertise to every engagement.",
-      "From early study design through to publication-ready results, we act as an embedded scientific partner, not just a service provider. Our goal is to accelerate your research, reduce technical bottlenecks, and ensure your genomic data reaches its full scientific potential.",
+      "Founded by Ashish Jain, PhD, a computational biologist with over a decade of experience at institutions including Boston Children's Hospital, the Frederick National Laboratory for Cancer Research (NIH/NCI), and Takeda Pharmaceuticals, ATGC brings publication grade rigor and deep technical expertise to every engagement.",
+      "From early study design through to publication ready results, we act as an embedded scientific partner, not just a service provider. Our goal is to accelerate your research, reduce technical bottlenecks, and ensure your genomic data reaches its full scientific potential.",
     ],
     highlights: [
       { icon: "🔬", title: "Research-Grade Analysis",  detail: "Every deliverable is held to peer-reviewed publication standards"          },
@@ -68,16 +68,16 @@ const SITE_DATA = {
    * ---------------------------------------------------------- */
   experience: [
     {
-      period:  "February 2026 — Present",
+      period:  "2026 - Present",
       role: "Senior Data Scientist",
       org:   "Merck & Co.",
-      summary: "Empowering neuroscience research through advanced multi-omics analysis and interactive visualization platforms, translating complex data into accessible, actionable insights.",
+      summary: "Empowering neuroscience research through advanced multi omics analysis and interactive visualization platforms, translating complex data into accessible, actionable insights.",
     },
     {
       org:     "Boston Children's Hospital",
       role:    "Data Scientist III",
-      period:  "2022 — Present",
-      summary: "Lead bioinformatics support across multiple research groups — scRNA-seq, spatial transcriptomics, WGS/WES, proteomics, and DNA methylation. Contributed to 10+ peer-reviewed publications.",
+      period:  "2022 — 2026",
+      summary: "Lead bioinformatics support across multiple research groups, scRNA-seq, spatial transcriptomics, WGS/WES, proteomics, and DNA methylation. Contributed to 10+ peer-reviewed publications.",
     },
     {
       org:     "Frederick National Lab for Cancer Research (NIH/NCI)",
@@ -91,12 +91,6 @@ const SITE_DATA = {
       period:  "2019",
       summary: "Human microbiome protein subfamily discovery using ProtVec deep learning; benchmarked GPU infrastructure for large-scale bioinformatics.",
     },
-    {
-      org:     "Iowa State University",
-      role:    "PhD Research — Bioinformatics & Computational Biology",
-      period:  "2015 — 2020",
-      summary: "Developed TissueEnrich (Bioconductor), PlacentaCellEnrich (R Shiny), and led multi-omics studies of early placental development. Thesis: NGS-based molecular mechanisms in early placentation.",
-    },
   ],
 
   /* ----------------------------------------------------------
@@ -106,13 +100,13 @@ const SITE_DATA = {
     {
       icon:  "🔬",
       title: "Single-Cell & Spatial Transcriptomics",
-      description: "End-to-end scRNA-seq (10X Genomics, Smart-Seq2) and spatial transcriptomics (10X Visium/VisiumHD, MERFISH) analysis including quality control, integration, cell-type annotation, trajectory analysis, cell-cell communication, and multi-sample integration.",
+      description: "End to end scRNA-seq (10X Genomics, Smart-Seq2) and spatial transcriptomics (10X Visium/VisiumHD, MERFISH) analysis including quality control, integration, cell type annotation, trajectory analysis, cell-cell communication, and multi sample integration.",
       tags:  ["scRNA-seq", "Seurat", "Spatial", "Monocle3", "CellChat"],
     },
     {
       icon:  "🧬",
       title: "Bulk RNAseq Data Analysis",
-      description: "Comprehensive bulk RNA-Seq data analysis, from raw sequencing reads to actionable biological insights, including quality control, differential expression, co-expression networks, and pathway interpretation.",
+      description: "Comprehensive bulk RNASeq data analysis, from raw sequencing reads to actionable biological insights, including quality control, differential expression, co-expression networks, and pathway interpretation.",
       tags:  ["RNA-seq", "WGCNA", "PPI", "GSEA"],
     },
     {
@@ -130,13 +124,13 @@ const SITE_DATA = {
     {
       icon:  "🤖",
       title: "Machine Learning & Statistical Modeling",
-      description: "Supervised and unsupervised learning applied to biological data — classification, regression, clustering, deep learning for protein sequences, and multi-omics integration.",
+      description: "Supervised and unsupervised learning applied to biological data, classification, regression, clustering, deep learning for protein sequences, and multi-omics integration.",
       tags:  ["R", "Python", "scikit-learn", "deep learning"],
     },
     {
       icon:  "📊",
       title: "Interactive Data Visualization and Tool Development",
-      description: "Custom R Shiny dashboards and interactive multi-omics visualization webtools for exploring and sharing complex genomic datasets with collaborators and clinicians.",
+      description: "Custom R Shiny dashboards and interactive multi omics visualization webtools for exploring and sharing complex genomic datasets with collaborators and clinicians.",
       tags:  ["R Shiny", "ggplot2", "plotly", "VitessceR"],
     },
   ],
