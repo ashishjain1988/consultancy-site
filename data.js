@@ -14,15 +14,17 @@ const SITE_DATA = {
    *  IDENTITY
    * ---------------------------------------------------------- */
   identity: {
-    companyName: "ATGC Bioinformatics",
-    name:       "Ashish Jain",
+    name:       "ATGC Bioinformatics",
+    founder:    "Ashish Jain, PhD",           // shown in About & footer
     credential: "PhD",
-    role:       "Bioinformatics & Computational Biology Consultant",
+    credential: "PhD",
+    role:       "Bioinformatics & Data Science Consultant",
     tagline:    "Senior Computational Biologist with 10+ years of expertise in NGS analysis, single-cell & spatial transcriptomics, machine learning, and multi-omics integration. Available for independent consulting.",
     email:      "contact@atgcbioinformatics.com",
     phone:      "(317) 529-7973",
-    photo:      "assets/images/AJ_headshot.jpg",   // ← Put path to your headshot here, e.g. "assets/photo.jpg"
-                      //   Leave empty to show placeholder
+    photo:      "assets/images/AJ_headshot.jpg",
+    brochure:   "assets/ATGCBioinformatics_brochure.pdf",
+    calendar:   "https://calendar.app.google/uhbtzzA7b66FCrRY7",
     links: {
       linkedin: "https://www.linkedin.com/in/ashish-jain-phd-395b2711/",
       github:   "https://github.com/ashishjain1988",
@@ -79,7 +81,7 @@ const SITE_DATA = {
       tags:  ["WGS/WES", "SNV", "CNV", "GWAS"],
     },
     {
-      icon:  "🧬",
+      icon:  "⚙️",
       title: "Other Omics Data Analysis",
       description: "Proteomics, ChIP-Seq, DNA methylation, and other omics data analysis with statistical modeling and biological interpretation tailored to your research questions.",
       tags:  ["Proteomics","OLINK","ChIP-Seq","DNA Methylation"],

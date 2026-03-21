@@ -41,9 +41,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── Nav brand ────────────────────────────────────────────
   const brand = $('nav-brand');
   if (brand) {
-    const [first, ...rest] = d.identity.name.split(' ');
-    brand.innerHTML = `${esc(first)} <span>${esc(rest.join(' '))}</span>, ${esc(d.identity.credential)}`;
-    //brand.innerHTML = `${esc(first)} <span>${esc(rest.join(' '))}</span>,`;
+    // Split at last word so accent color lands on "Bioinformatics"
+    const words = d.identity.name.split(' ');
+    const last  = words.pop();
+    brand.innerHTML = `${esc(words.join(' '))} <span>${esc(last)}</span>`;
   }
 
   // ── Hero ─────────────────────────────────────────────────
@@ -52,12 +53,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const heroName = $('hero-name');
   if (heroName) {
-    const [first, ...rest] = d.identity.name.split(' ');
-    heroName.innerHTML = `${esc(first)} ${esc(rest.join(' '))},<br><span class="hero-title-accent">${esc(d.identity.credential)}</span>`;
+    const words = d.identity.name.split(' ');
+    const last  = words.pop();
+    heroName.innerHTML = `${esc(words.join(' '))}<br><span class="hero-title-accent">${esc(last)}</span>`;
   }
 
   const heroTagline = $('hero-tagline');
   if (heroTagline) heroTagline.textContent = d.identity.tagline;
+
+  // Brochure + CTA buttons
+  const heroCtas = $('hero-ctas');
+  if (heroCtas) {
+    let btns = `<a href="#services" class="btn-primary">View Services</a>
+                <a href="#contact"  class="btn-secondary">Get in Touch</a>`;
+    if (d.identity.brochure) {
+      btns += `<a href="${esc(d.identity.brochure)}" class="btn-secondary" download>
+                 ⬇ Download Brochure
+               </a>`;
+    }
+    heroCtas.innerHTML = btns;
+  }
 
   // Hero stats
   const statsContainer = $('hero-stats');
@@ -252,6 +267,28 @@ document.addEventListener('DOMContentLoaded', () => {
   const contactScholar = $('contact-scholar');
   if (contactScholar) contactScholar.href = d.identity.links.scholar;
 
+  // Calendar booking link
+  const contactCalendar = $('contact-calendar');
+  if (contactCalendar) {
+    if (d.identity.calendar) {
+      contactCalendar.href = d.identity.calendar;
+      contactCalendar.closest('.contact-item').style.display = 'flex';
+    } else {
+      contactCalendar.closest('.contact-item').style.display = 'none';
+    }
+  }
+
+  // Brochure download link
+  const contactBrochure = $('contact-brochure');
+  if (contactBrochure) {
+    if (d.identity.brochure) {
+      contactBrochure.href = d.identity.brochure;
+      contactBrochure.closest('.contact-item').style.display = 'flex';
+    } else {
+      contactBrochure.closest('.contact-item').style.display = 'none';
+    }
+  }
+
   const serviceSelect = $('service-select');
   if (serviceSelect) {
     serviceSelect.innerHTML =
@@ -262,7 +299,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── Footer ───────────────────────────────────────────────
   const footerBrand = $('footer-brand');
   if (footerBrand) {
-    footerBrand.textContent = `${d.identity.name}, ${d.identity.credential}`;
+    footerBrand.innerHTML = `${esc(d.identity.name)} <span style="opacity:0.45;font-size:0.85em">· ${esc(d.identity.founder)}</span>`;
   }
 
   const footerYear = $('footer-year');
