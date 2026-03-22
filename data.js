@@ -142,7 +142,7 @@ const SITE_DATA = {
   skills: [
     {
       title: "NGS & Multi-Omics",
-      items: ["scRNA-seq", "Spatial Transcriptomics", "Bulk RNA-seq", "WGS/WES", "ChIP-Seq", "DNA Methylation", "Proteomics", "Hi-C","MOFA", "GWAS", "Trajectory Analysis", "Cell-Cell Communication","WGCNA"],
+      items: ["scRNA-seq", "Spatial Transcriptomics", "Bulk RNA-seq", "WGS/WES", "ChIP-Seq", "DNA Methylation", "Proteomics", "CUT&RUN"],
     },
     {
       title: "Programming",
