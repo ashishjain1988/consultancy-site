@@ -42,6 +42,65 @@ const SITE_DATA = {
   ],
 
   /* ----------------------------------------------------------
+   *  WHY ATGC BIOINFORMATICS
+   *  intro   — 1–2 sentence paragraph under the heading
+   *  reasons — icon, title, description for each differentiator
+   *  compare — rows in the vs-table: feature, atgc, generic
+   *            Set atgc/generic to true/false or a short string.
+   * ---------------------------------------------------------- */
+  whyATGC: {
+    intro: "There is no shortage of bioinformatics tools and service providers, but turning raw genomic data into reliable, publishable insights requires more than software. It requires deep scientific judgment, domain expertise, and a genuine commitment to your research goals. Here is what sets ATGC apart.",
+ 
+    reasons: [
+      {
+        icon:        "🎓",
+        title:       "Publication-Grade Science",
+        description: "Every analysis is conducted to the standard of a peer-reviewed manuscript. Our founder has contributed to 30+ publications in journals including Nature Immunology, PNAS, and Bioinformatics, we know what reviewers expect.",
+      },
+      {
+        icon:        "🤝",
+        title:       "True Scientific Partnership",
+        description: "We don't just run pipelines and hand back files. We engage at every stage, from study design and sample QC to results interpretation and manuscript support, acting as an extension of your own team.",
+      },
+      {
+        icon:        "⚙️",
+        title:       "End-to-End Technical Depth",
+        description: "From raw FASTQ files to interactive dashboards, we handle the full stack: pipeline development, HPC & cloud deployment, statistical modeling, machine learning, and custom R package development.",
+      },
+      {
+        icon:        "🔁",
+        title:       "Reproducible & Scalable Workflows",
+        description: "All pipelines are version-controlled, documented, and built for reproducibility. Whether you need to scale to 100 samples or hand off analysis to an internal team, our workflows are designed to last.",
+      },
+      {
+        icon:        "🌍",
+        title:       "Proven Open-Source Tools",
+        description: "Tools we have built — including TissueEnrich (Bioconductor) and MAFDash — are actively used by thousands of researchers globally. We build for the community, not just for the project.",
+      },
+      {
+        icon:        "⚡",
+        title:       "Responsive & Reliable",
+        description: "As an independent consultancy, every project receives direct senior-level attention. No black-box reports. Clear communication and on-time delivery, every engagement.",
+      },
+    ],
+ 
+    // ── Comparison table ──────────────────────────────────
+    // Set atgc/generic to true (✓), false (✗), or a short string
+    compareTitle: "ATGC vs. Generic Bioinformatics Services",
+    compareRows: [
+      { feature: "Senior-level scientist on every project",        atgc: true,  generic: false },
+      { feature: "Study design & hypothesis consultation",       atgc: true,  generic: false },
+      //{ feature: "Good communication at every step",       atgc: true,  generic: false },
+      //{ feature: "Full pipeline development & HPC deployment",   atgc: true,  generic: "extra cost" },
+      { feature: "Manuscript & figure support",                  atgc: true,  generic: false },
+      { feature: "Custom R packages & interactive dashboards",   atgc: true,  generic: false },
+      { feature: "Reproducible, documented workflows",           atgc: true,  generic: "varies" },
+      { feature: "Transparent pricing & direct communication",   atgc: true,  generic: "varies" },
+      { feature: "Published domain expert (30+ papers)",         atgc: true,  generic: false },
+    ],
+  },
+ 
+  /* ----------------------------------------------------------
    *  ABOUT
    *  Written from a consultancy perspective — "we/our" framing.
    *  The experience track record is in data.experience below.

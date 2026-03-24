@@ -167,6 +167,53 @@ document.addEventListener('DOMContentLoaded', () => {
     `).join('');
   }
 
+  // ── Why ATGC ─────────────────────────────────────────────
+  const whyIntro = $('why-intro');
+  if (whyIntro) whyIntro.textContent = d.whyATGC.intro;
+
+  const whyGrid = $('why-grid');
+  if (whyGrid) {
+    whyGrid.innerHTML = d.whyATGC.reasons.map(r => `
+      <div class="why-card reveal">
+        <div class="why-icon">${esc(r.icon)}</div>
+        <h3>${esc(r.title)}</h3>
+        <p>${esc(r.description)}</p>
+      </div>
+    `).join('');
+  }
+
+  const whyCompare = $('why-compare');
+  if (whyCompare) {
+    const renderCell = (val) => {
+      if (val === true)  return `<span class="compare-yes">✓</span>`;
+      if (val === false) return `<span class="compare-no">✗</span>`;
+      return `<span class="compare-partial">${esc(String(val))}</span>`;
+    };
+    whyCompare.innerHTML = `
+      <h3 class="compare-title">${esc(d.whyATGC.compareTitle)}</h3>
+      <div class="compare-table-wrap">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th class="col-atgc">${esc(d.identity.name)}</th>
+              <th class="col-generic">Generic Service</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${d.whyATGC.compareRows.map((row, i) => `
+              <tr class="${i % 2 === 0 ? 'row-even' : ''}">
+                <td class="feature-col">${esc(row.feature)}</td>
+                <td class="val-col">${renderCell(row.atgc)}</td>
+                <td class="val-col">${renderCell(row.generic)}</td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      </div>
+    `;
+  }
+
   // ── Skills / Expertise ───────────────────────────────────
   const skillsLayout = $('skills-layout');
   if (skillsLayout) {

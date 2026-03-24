@@ -442,6 +442,114 @@ nav {
 .service-card p  { font-size: 0.9rem; color: var(--ink-light); line-height: 1.7; margin-bottom: 1rem; }
 .service-tags    { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; }
 
+/* ── WHY ATGC ─────────────────────────────────────────────── */
+#why-atgc { background: var(--paper-2); }
+
+/* 3-column grid of differentiator cards */
+.why-grid {
+  display:               grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap:                   1.5px;
+  background:            var(--rule);
+  border:                1px solid var(--rule);
+  margin-bottom:         4rem;
+}
+
+.why-card {
+  background: var(--paper);
+  padding:    2.25rem 2rem;
+  transition: background 0.2s;
+}
+.why-card:hover { background: var(--accent-bg); }
+
+.why-icon {
+  font-size:     1.6rem;
+  margin-bottom: 1rem;
+  display:       block;
+}
+
+.why-card h3 {
+  font-size:     1.05rem;
+  margin-bottom: 0.6rem;
+  color:         var(--ink);
+}
+
+.why-card p {
+  font-size:   0.9rem;
+  color:       var(--ink-light);
+  line-height: 1.7;
+}
+
+/* Comparison table */
+.compare-title {
+  font-family:   var(--serif);
+  font-size:     1.3rem;
+  font-weight:   600;
+  color:         var(--ink);
+  margin-bottom: 1.5rem;
+  text-align:    center;
+}
+
+.compare-table-wrap {
+  overflow-x: auto;           /* scrollable on small screens */
+  border:     1px solid var(--rule);
+}
+
+.compare-table {
+  width:           100%;
+  border-collapse: collapse;
+  font-size:       0.9rem;
+}
+
+.compare-table thead tr {
+  background: var(--accent);
+}
+
+.compare-table th {
+  padding:     1rem 1.25rem;
+  text-align:  center;
+  font-family: var(--mono);
+  font-size:   0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color:       white;
+  font-weight: 500;
+}
+
+/* Feature name column left-aligned */
+.compare-table th:first-child { text-align: left; }
+
+.col-atgc    { background: rgba(255,255,255,0.12); }
+.col-generic { }
+
+.compare-table tbody tr { border-bottom: 1px solid var(--rule); }
+.row-even td             { background: var(--paper-2); }
+.compare-table tbody tr:hover td { background: var(--accent-bg); }
+
+.compare-table td {
+  padding:    0.85rem 1.25rem;
+  color:      var(--ink-light);
+  vertical-align: middle;
+}
+
+.feature-col { color: var(--ink); font-size: 0.88rem; }
+
+.val-col {
+  text-align: center;
+  font-size:  1rem;
+}
+
+/* Tick / cross / partial */
+.compare-yes     { color: var(--accent); font-size: 1.1rem; font-weight: 700; }
+.compare-no      { color: #c0392b;       font-size: 1.1rem; font-weight: 700; }
+.compare-partial {
+  font-family:    var(--mono);
+  font-size:      0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color:          var(--gold);
+}
+
 /* ── SKILLS / EXPERTISE ───────────────────────────────────── */
 #skills { background: var(--paper); }
 
