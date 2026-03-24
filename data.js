@@ -93,7 +93,7 @@ const SITE_DATA = {
       //{ feature: "Good communication at every step",       atgc: true,  generic: false },
       //{ feature: "Full pipeline development & HPC deployment",   atgc: true,  generic: "extra cost" },
       { feature: "Manuscript & figure support",                  atgc: true,  generic: false },
-      { feature: "Custom R packages & interactive dashboards",   atgc: true,  generic: false },
+      { feature: "Custom R packages & webtools",   atgc: true,  generic: false },
       { feature: "Reproducible, documented workflows",           atgc: true,  generic: "varies" },
       { feature: "Transparent pricing & direct communication",   atgc: true,  generic: "varies" },
       { feature: "Published domain expert (30+ papers)",         atgc: true,  generic: false },
