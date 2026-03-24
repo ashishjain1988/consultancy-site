@@ -214,21 +214,21 @@ document.addEventListener('DOMContentLoaded', () => {
   if (scholarLink) scholarLink.href = d.identity.links.scholar;
 
   // ── Testimonials ─────────────────────────────────────────
-  const testimonialsGrid = $('testimonials-grid');
-  if (testimonialsGrid) {
-    const hasPlaceholders = d.testimonials.some(t => t.placeholder);
-    const note = $('testimonials-note');
-    if (note) note.style.display = hasPlaceholders ? 'block' : 'none';
+  // const testimonialsGrid = $('testimonials-grid');
+  // if (testimonialsGrid) {
+  //   const hasPlaceholders = d.testimonials.some(t => t.placeholder);
+  //   const note = $('testimonials-note');
+  //   if (note) note.style.display = hasPlaceholders ? 'block' : 'none';
 
-    testimonialsGrid.innerHTML = d.testimonials.map(t => `
-      <div class="testimonial-card reveal">
-        <p class="testimonial-quote">"${esc(t.quote)}"</p>
-        <p class="testimonial-author">
-          — ${esc(t.author)}${t.placeholder ? ' <em>(placeholder)</em>' : ''}
-        </p>
-      </div>
-    `).join('');
-  }
+  //   testimonialsGrid.innerHTML = d.testimonials.map(t => `
+  //     <div class="testimonial-card reveal">
+  //       <p class="testimonial-quote">"${esc(t.quote)}"</p>
+  //       <p class="testimonial-author">
+  //         — ${esc(t.author)}${t.placeholder ? ' <em>(placeholder)</em>' : ''}
+  //       </p>
+  //     </div>
+  //   `).join('');
+  // }
 
   // ── Contact ──────────────────────────────────────────────
   const contactEmail = $('contact-email');
