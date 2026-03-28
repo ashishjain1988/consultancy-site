@@ -99,10 +99,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // About — profile links
   const aboutLinks = $('about-links');
   if (aboutLinks) {
-    const { email, links } = d.identity;
+    const { email_ashish, links } = d.identity;
     aboutLinks.innerHTML = `
       <a href="mailto:${esc(email)}" class="about-link">
-        <span class="about-link-icon">✉</span>${esc(email)}
+        <span class="about-link-icon">✉</span>${esc(email_ashish)}
       </a>
       <a href="${esc(links.linkedin)}" target="_blank" rel="noopener" class="about-link">
         <span class="about-link-icon">in</span>LinkedIn Profile
