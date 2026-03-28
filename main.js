@@ -333,7 +333,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (footerYear) footerYear.textContent = new Date().getFullYear();
 
   const footerLinkedIn = $('footer-linkedin');
-  if (footerLinkedIn) footerLinkedIn.href = d.identity.links.linkedin;
+  if (footerLinkedIn) footerLinkedIn.href = d.identity.links.linkedin_atgc;
 
   const footerGithub = $('footer-github');
   if (footerGithub) footerGithub.href = d.identity.links.github;
