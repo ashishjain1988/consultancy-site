@@ -26,6 +26,7 @@ const SITE_DATA = {
     calendar:   "https://calendar.app.google/uhbtzzA7b66FCrRY7",
     links: {
       linkedin: "https://www.linkedin.com/in/ashish-jain-phd-395b2711/",
+      linkedin_atgc: "https://www.linkedin.com/company/atgc-bioinformatics/",
       github:   "https://github.com/ashishjain1988",
       scholar:  "https://scholar.google.com/citations?user=_mFN4s4AAAAJ",
     },

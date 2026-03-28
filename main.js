@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const contactLinkedIn = $('contact-linkedin');
-  if (contactLinkedIn) contactLinkedIn.href = d.identity.links.linkedin;
+  if (contactLinkedIn) contactLinkedIn.href = d.identity.links.linkedin_atgc;
 
   const contactGithub = $('contact-github');
   if (contactGithub) {
