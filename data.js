@@ -19,7 +19,7 @@ const SITE_DATA = {
     credential: "PhD",
     role:       "Bioinformatics & Data Science Consultancy",
     tagline:    "Empowering biotech and research teams to unlock the full potential of their data through advanced NGS analytics, single-cell and spatial biology, and machine learning driven multi-omics integration.",
-    email:      "contact@atgcbioinformatics.com",
+    email:      "ashish.jain@atgcbioinformatics.com",
     phone:      "(317) 529-7973",
     photo:      "assets/images/AJ_headshot.jpg",
     brochure:   "assets/ATGCBioinformatics_brochure.pdf",
