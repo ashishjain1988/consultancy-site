@@ -326,7 +326,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── Footer ───────────────────────────────────────────────
   const footerBrand = $('footer-brand');
   if (footerBrand) {
-    footerBrand.innerHTML = `${esc(d.identity.name)}<span style="opacity:0.45;font-size:0.85em"> · ${esc(d.identity.founder)}</span>`;
+    footerBrand.innerHTML = `${esc(d.identity.name)}<span style="opacity:0.45;font-size:0.85em"></span>`;
   }
 
   const footerYear = $('footer-year');
