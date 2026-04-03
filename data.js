@@ -318,20 +318,20 @@ const SITE_DATA = {
    * ---------------------------------------------------------- */
   testimonials: [
     {
-      quote:  "His TissueEnrich package has become a standard tool in our lab. The documentation and support have been exemplary, truly a practitioner's tool.",
-      author: "Geetu Tuteja, Professor, Iowa State University",
+      quote:  "We collaborated with Ashish for our study on generating pediatric duodenal single cell atlas. Ashish was professional, knowledgeable and enabled us to adapt a dashboard integrating spatial proteomics and single cell transcriptomics data. We enjoyed working with him and cant thank him enough for his help.",
+      author: "Dr. Krishnan Raghunathan, Senior Scientist, Harvard Medical School",
       placeholder: false,
     },
     {
       quote:  "Dr. Jain's TissueEnrich tool enabled me to conduct my own research on the delamination of throphoblast-like synctia in an embryonic stem cell based differentiation model",
-      author: "Masatoshi Ohgushi, Associate Professor, Kyoto University",
+      author: "Dr. Masatoshi Ohgushi, Associate Professor, Kyoto University",
       placeholder: false,
     },
-    {
-      quote:  "Dr. Jain's continued work is indispensable to obstetricians in the United States. He leads by example and takes bioinfomatics to new heights of biological understanding.",
-      author: "Mana M. Parast, Professor, UCSD",
-      placeholder: false,
-    },
+    // {
+    //   quote:  "",
+    //   author: "Dr. Aakanksha Jain, Assistant Professor, University of Washington",
+    //   placeholder: false,
+    // },
   ],
 
   /* ----------------------------------------------------------
