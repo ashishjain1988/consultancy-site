@@ -323,15 +323,15 @@ const SITE_DATA = {
       placeholder: false,
     },
     {
+      quote:  "It was a pleasure working with Ashish Jain on our study, “Nociceptor-immune interactomes reveal insult-specific immune signatures of pain.” His collaborative approach, responsiveness, and deep technical expertise made him an invaluable contributor to the project.",
+      author: "Dr. Aakanksha Jain, Assistant Professor, University of Washington",
+      placeholder: false,
+    },
+    {
       quote:  "Dr. Jain's TissueEnrich tool enabled me to conduct my own research on the delamination of throphoblast-like synctia in an embryonic stem cell based differentiation model",
       author: "Dr. Masatoshi Ohgushi, Associate Professor, Kyoto University",
       placeholder: false,
     },
-    // {
-    //   quote:  "",
-    //   author: "Dr. Aakanksha Jain, Assistant Professor, University of Washington",
-    //   placeholder: false,
-    // },
   ],
 
   /* ----------------------------------------------------------
