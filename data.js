@@ -328,8 +328,8 @@ const SITE_DATA = {
       placeholder: false,
     },
     {
-      quote:  "Dr. Jain's TissueEnrich tool enabled me to conduct my own research on the delamination of throphoblast-like synctia in an embryonic stem cell based differentiation model",
-      author: "Dr. Masatoshi Ohgushi, Associate Professor, Kyoto University",
+      quote:  "I have been very pleased with my collaboration with Ashish Jain on OLINK proteomics pain data and PRS projects. Ashish has consistently delivered high-quality, reliable work and has brought strong bioinformatics expertise, professionalism, and clear communication to our projects. He is creative, thoughtful, responsive, and a pleasure to work with, and his contributions have meaningfully advanced our analyses and overall project goals.",
+      author: "Dr. Catherine Brownstein, Assistant Professor, Harvard Medical School",
       placeholder: false,
     },
   ],
