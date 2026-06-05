@@ -15,6 +15,7 @@ const SITE_DATA = {
    * ---------------------------------------------------------- */
   identity: {
     name:       "ATGC Bioinformatics",
+    logo: "assets/images/ATGC_Bioinformatics_Logo.png",
     founder:    "Ashish Jain, PhD",           // shown in About & footer
     credential: "PhD",
     role:       "Bioinformatics & Data Science Consultancy",
