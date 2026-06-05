@@ -34,12 +34,12 @@ document.addEventListener('DOMContentLoaded', () => {
   document.title = `${d.identity.name} | ${d.identity.role}`;
 
   // ── Nav brand ────────────────────────────────────────────
-  // const brand = $('nav-brand');
-  // if (brand) {
-  //   const words = d.identity.name.split(' ');
-  //   const last  = words.pop();
-  //   brand.innerHTML = `${esc(words.join(' '))} <span>${esc(last)}</span>`;
-  // }
+  const brand = $('nav-brand');
+  if (brand) {
+    const words = d.identity.name.split(' ');
+    const last  = words.pop();
+    brand.innerHTML = `${esc(words.join(' '))} <span>${esc(last)}</span>`;
+  }
 
   // ── Hero ─────────────────────────────────────────────────
   const heroEyebrow = $('hero-eyebrow');
