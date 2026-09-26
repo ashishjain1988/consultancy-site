@@ -1,0 +1,80 @@
+[
+  {
+    "slug": "single-cell-spatial",
+    "title": "Single-cell & spatial transcriptomics",
+    "summary": "A reproducible workflow from raw matrices through biological interpretation.",
+    "steps": [
+      "Input audit and experimental-design review",
+      "Cell or spot quality control and doublet assessment",
+      "Normalization, integration, and batch-effect evaluation",
+      "Cell-type annotation and marker validation",
+      "Differential abundance, expression, trajectories, or cell communication",
+      "Publication-ready figures, methods, and handoff"
+    ]
+  },
+  {
+    "slug": "bulk-rnaseq",
+    "title": "Bulk RNA-seq analysis",
+    "summary": "From FASTQ quality control to differential expression and pathway-level insight.",
+    "steps": [
+      "FASTQ and metadata validation",
+      "Read quality control, alignment, or pseudoalignment",
+      "Gene-level quantification and sample quality control",
+      "Differential expression with an appropriate study design",
+      "GSEA, network, and pathway analysis",
+      "Reproducible report and publication-ready outputs"
+    ]
+  },
+  {
+    "slug": "wgs-wes",
+    "title": "Whole-genome & exome analysis",
+    "summary": "A traceable workflow for variant discovery, annotation, and research interpretation.",
+    "steps": [
+      "Sample, pedigree, and reference-build review",
+      "Read quality control, alignment, and duplicate handling",
+      "SNV, indel, and optional CNV calling",
+      "Variant quality filtering and annotation",
+      "Cohort, phenotype, or association analysis",
+      "Prioritized results with methods documentation"
+    ]
+  },
+  {
+    "slug": "olink-proteomics",
+    "title": "OLINK proteomics analysis",
+    "summary": "Rigorous analysis of OLINK NPX data from assay quality control through differential protein and pathway interpretation.",
+    "steps": [
+      "Study design, manifest, and NPX file review",
+      "Assay, sample, and limit-of-detection quality control",
+      "Normalization assessment and batch-effect evaluation",
+      "Differential protein abundance modeling with relevant covariates",
+      "Pathway, network, biomarker, and multi-omics integration analyses",
+      "Publication-ready figures, results tables, methods, and handoff"
+    ]
+  },
+  {
+    "slug": "chip-seq",
+    "title": "ChIP-seq analysis",
+    "summary": "End-to-end transcription-factor and histone-mark analysis from raw reads to peaks, motifs, and regulatory interpretation.",
+    "steps": [
+      "Experimental design, antibody, control, and metadata review",
+      "FASTQ quality control, alignment, and duplicate assessment",
+      "Library-complexity, enrichment, and signal-quality evaluation",
+      "Peak calling with matched controls and replicate-aware filtering",
+      "Peak annotation, differential binding, motif, and pathway analysis",
+      "Genome-browser tracks, publication figures, methods, and handoff"
+    ]
+  },
+  {
+    "slug": "dna-methylation-arrays",
+    "title": "DNA methylation array analysis",
+    "summary": "Reproducible EPIC and 450K array analysis from IDAT quality control to differential methylation and biological interpretation.",
+    "steps": [
+      "Sample sheet, phenotype, array type, and study-design review",
+      "IDAT import, probe-level quality control, and sample diagnostics",
+      "Background correction, normalization, and problematic-probe filtering",
+      "Cell-composition, batch, and technical-confounder assessment",
+      "Differentially methylated position and region analysis with annotation",
+      "Pathway results, visualizations, methods, and analysis-ready handoff"
+    ]
+  }
+]
